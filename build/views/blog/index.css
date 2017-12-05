@@ -1,0 +1,37 @@
+body{
+    margin:0 0 0 0;
+    height:100vh;
+    width:100vw;
+}
+.head{
+    width:100%;
+    position:fixed;
+    height:15vh;
+    background-color:black;
+    text-align:center;
+    color:white;
+    padding: 0;
+    margin:0;
+    top:0;
+}
+.head span{
+    margin-top:5vh;
+    height: 5vh;
+    width:100%;
+    display: block;
+}
+
+.foot{
+    /* background-color:black; */
+    text-align:center;
+    bottom:20px;
+}
+
+.bdcode{
+    width:100vw;
+    height:100vh;
+}
+.bdcode div{
+    margin-top:20vh;
+    text-align:center;
+}
