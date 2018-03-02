@@ -48,8 +48,9 @@ function GetSetting(){
             ]
         },
         externals:{
-            React:"react",
-            ReactDOM:"react-dom"
+            // React:"react",
+            // ReactDOM:"react-dom"
+            blogcommon:"./build/common.min.js"
         },
         plugins:[
                 // new webpack.optimize.UglifyJsPlugin({
@@ -83,14 +84,10 @@ comsetting.output.filename="[name].js";
 //setting.push(comsetting);
 
 var comsetting=GetSetting();
-comsetting.entry.common= ["react","react-dom"];
-comsetting.output.chunkFilename="[name].js";
+//comsetting.entry.common= ["react","react-dom"];
+setEntry("./content/src/common.js",comsetting);
+//comsetting.output.chunkFilename="[name].js";
 comsetting.output.filename="[name].min.js";
-comsetting.plugins.push(
-    new webpack.optimize.CommonsChunkPlugin({
-        names: ['common'],
-    })
-);
-setting.push(comsetting)
+//setting.push(comsetting)
 
 module.exports=setting;

@@ -70,41 +70,51 @@ return /******/ (function(modules) { // webpackBootstrap
 /******/ 	__webpack_require__.p = "";
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 0);
+/******/ 	return __webpack_require__(__webpack_require__.s = 1);
 /******/ })
 /************************************************************************/
 /******/ ([
-/* 0 */
+/* 0 */,
+/* 1 */
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
 
 
-// import React from 'react';
-// import ReactDOM from 'react-dom';
-//import {ReactDOM,React} from "blogcommon";
-var list = [{ url: "http://weibo.com", sitename: "新浪微博" }, { url: "http://baidu.com", sitename: "万能度娘" }, { url: "http://m.eggworld.cn", sitename: "蛋e网" }, { url: "indexmy.html", sitename: "我的世界" }];
-var listDom = [];
-list.forEach(function (item) {
-    listDom.push(React.createElement(
-        "li",
-        { key: item.sitename },
-        React.createElement(
-            "a",
-            { target: "_blank", href: item.url },
-            item.sitename
-        )
-    ));
-});
-// listDom= list.map((item)=>
-// <li><a href={item.url}>{item.sitename}</a></li>
-// );
+var _createClass = function () { function defineProperties(target, props) { for (var i = 0; i < props.length; i++) { var descriptor = props[i]; descriptor.enumerable = descriptor.enumerable || false; descriptor.configurable = true; if ("value" in descriptor) descriptor.writable = true; Object.defineProperty(target, descriptor.key, descriptor); } } return function (Constructor, protoProps, staticProps) { if (protoProps) defineProperties(Constructor.prototype, protoProps); if (staticProps) defineProperties(Constructor, staticProps); return Constructor; }; }();
+
+function _classCallCheck(instance, Constructor) { if (!(instance instanceof Constructor)) { throw new TypeError("Cannot call a class as a function"); } }
+
+function _possibleConstructorReturn(self, call) { if (!self) { throw new ReferenceError("this hasn't been initialised - super() hasn't been called"); } return call && (typeof call === "object" || typeof call === "function") ? call : self; }
+
+function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
+
 window.onload = function () {
-    ReactDOM.render(React.createElement(
-        "ul",
-        null,
-        listDom
-    ), document.querySelector("#sitelist"));
+    var Sayhi = function (_React$Component) {
+        _inherits(Sayhi, _React$Component);
+
+        function Sayhi() {
+            _classCallCheck(this, Sayhi);
+
+            return _possibleConstructorReturn(this, (Sayhi.__proto__ || Object.getPrototypeOf(Sayhi)).apply(this, arguments));
+        }
+
+        _createClass(Sayhi, [{
+            key: "render",
+            value: function render() {
+                return React.createElement(
+                    "span",
+                    null,
+                    "I am ",
+                    this.props.name
+                );
+            }
+        }]);
+
+        return Sayhi;
+    }(React.Component);
+
+    ReactDOM.render(React.createElement(Sayhi, { name: "\u8D75\u56DB\u5E73" }), document.querySelector("#tab1"));
 };
 
 /***/ })

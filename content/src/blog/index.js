@@ -1,22 +1,24 @@
-import React from 'React';
-import ReactDOM from 'ReactDOM';
+// import React from 'react';
+// import ReactDOM from 'react-dom';
+//import {ReactDOM,React} from "blogcommon";
 var list=[
-    {url:"https://weibo.com",sitename:"新浪微博"},
-    {url:"https://baidu.com",sitename:"万能度娘"},
-    {url:"https://m.eggworld.cn",sitename:"蛋e网"},
+    {url:"http://weibo.com",sitename:"新浪微博"},
+    {url:"http://baidu.com",sitename:"万能度娘"},
+    {url:"http://m.eggworld.cn",sitename:"蛋e网"},
+    {url:"indexmy.html",sitename:"我的世界"},
 ];
 var listDom=[];
 list.forEach(function(item){
-    listDom.push(<li><a href={item.url}>{item.sitename}</a></li>);
+    listDom.push(<li key={item.sitename}><a target="_blank" href={item.url}>{item.sitename}</a></li>);
 })
-// list.map((item)=>
+// listDom= list.map((item)=>
 // <li><a href={item.url}>{item.sitename}</a></li>
-// )
+// );
 window.onload=function(){
     ReactDOM.render(
         <ul>
         {
-            listDom
+            listDom          
         }
         </ul>,
         document.querySelector("#sitelist")
