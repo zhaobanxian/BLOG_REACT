@@ -96,7 +96,7 @@ body .mnue_right{
 
 .searchlogo{
     width:40%;
-    margin: 40px auto 0 auto;
+    margin: 9px auto 0 auto;
 }
 
 .div_search_wrap{
@@ -169,7 +169,7 @@ body .mnue_right{
     /*display:none;*/
     margin:17px auto 0 auto;
     width:802px;
-    margin-left:22%;
+    /* margin-left:22%; */
     position:relative;
     height:74px;
 }
@@ -234,4 +234,51 @@ body .mnue_right{
     width:66px;
     text-align: center;
     margin:0 auto;
+}
+
+.table{
+    margin: 70px auto 0 auto;
+    width:895px;
+    /* background-image:linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important; */
+}
+.table .panelhead{
+    height:39px;
+}
+
+.table .panelhead span{
+    height:39px;
+    display:table-cell;
+    vertical-align:middle;
+    width:80px;
+    color:#333 !important;
+    font-size:14px;
+    z-index:2;
+}
+
+.table .panelhead span:hover{
+    background-image:linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight:700;
+}
+
+.table .panelhead .head1{
+    text-align:center;
+    width:124px;
+    background-image:linear-gradient(rgba(240,240,240,.7) 0,rgba(240,240,240,.7) 100%) !important;
+    background-color: rgba(0, 0, 0, 0);
+    font-weight:700;
+}
+
+.table .panelhead head1::after{
+    
+}
+
+.table .panelhead head2{
+    
+}
+
+.table .panelhead head3{
+    background-image:url("https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/mancard/img/card_setts_fdb17359.png");
+    background-position:-121px -49px;
+    width:18px;
 }

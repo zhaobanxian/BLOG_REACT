@@ -1,0 +1,18 @@
+.div1{
+    width:100%;
+    height:500px;
+    border:1px solid #f00;
+    position:static;
+}
+
+.div2{
+    width:300px;
+    height:300px;
+    margin:auto;
+    border:1px solid #ff0;
+    float:left;
+}
+
+span{
+    right:0;
+}

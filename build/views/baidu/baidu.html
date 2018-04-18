@@ -5,7 +5,7 @@
         <link href="baidu.css?v=1" type="text/css" rel="stylesheet"/>
     </head>
     <body>
-        <div style="min-width:800px;height:32px;position:relative;">
+        <div style="min-width:900px;height:32px;position:relative;">
             <div class="head"></div>
             <div class="mnue_left mnue">
                 <div class="mnue_left_1">
@@ -35,9 +35,8 @@
                     </div>
             </div>
         </div>
-        
         <form action="https://www.baidu.com/s">
-            <div class="div_search">
+            <div class="div_search" style="min-width:900px;">
                 <div class="searchlogo">
                         <img width="270" height="129" src="http://www.baidu.com/img/superlogo_c4d7df0a003d3db9b65e9ef0fe6da1ec.png">
                 </div>
@@ -52,8 +51,19 @@
                         </div>
                     </div>
                 </div>
+                <div class="table">
+                        <div class="panelhead">
+                            <span class="head1">我的关注</span>
+                            <span class="head2">导航</span>
+                            <span class="head2">推荐</span>
+                            <span class="head3"></span>
+                        </div>
+                        <div class="panel1"></div>                                 
+                        <div class="panel2"></div>
+                        <div class="panel3"></div>
+                </div>
             </div>
-            <div class="div_fixed_search_warp">
+            <div class="div_fixed_search_warp" style="min-width:900px;">
                 <div class="div_fixed_search">
                     <div class="photo"></div>
                     <span><img src="https://ss0.bdstatic.com/5aV1bjqh_Q23odCf/static/superman/img/logo_top_ca79a146.png"></span>
@@ -62,7 +72,8 @@
                 </div>
             </div>
         </form>
-        <div id="layer_right_link" style="position:fixed;right:0px;font-size:13px;z-index:22;color:black;top:0px;display:none;">
+        
+        <div id="layer_right_link" style="position:absolute;right:0px;font-size:13px;z-index:22;color:black;top:0px;display:none;">
             <div style="right:0px;width:86px;height:32px;margin-top:0px;text-align:center;overflow:hidden;background-image:linear-gradient(rgba(255,255,255,.95) 0,rgba(255,255,255,.95) 100%) !important;">
                     <span style="margin:6px auto 0 auto;display:block;">更多产品</span>
                 </div>
@@ -102,12 +113,46 @@
                     hidesearch.style.display="none";
                 }
             });
-            document.querySelector("#layer_right_link").onmouseout =function(){
-                console.log("onmouseout")
-                //document.querySelector("#layer_right_link").style.display="none";
+
+            document.querySelectorAll("#layer_right_link").forEach(function(item){
+                item.addEventListener("mouseout",moveproductonmouseout);
+                item.addEventListener("mouseover",function(){
+                    console.log("mouseover")
+                });
+            });
+
+            window.onresize=function(){
+                setTouLeft();
             }
+            
+            setTouLeft();
     };
+    function setTouLeft(){
+        var wd=document.documentElement.clientWidth<900?900:document.documentElement.clientWidth;
+        document.getElementsByClassName("div_fixed_search")[0].style.marginLeft=
+            (wd- 537+104)/2-223;
+    }
+    function moveproductonmouseout(event){
+        //console.log(event);
+        var s = event.toElement || event.relatedTarget; 
+            if (!this.contains(s)) {
+                document.querySelector("#layer_right_link").style.display="none"; 
+            }
+    }
+
+    function stopBubble(e) {
+        // console.log("stop");
+        //如果提供了事件对象，则这是一个非IE浏览器
+        if ( e && e.stopPropagation )
+            //因此它支持W3C的stopPropagation()方法
+            e.stopPropagation();
+        else
+            //否则，我们需要使用IE的方式来取消事件冒泡
+            window.event.cancelBubble = true;
+    }
+
     function moveproductonmouseover(){
+        console.log("mouseover");
         //toshow something
         document.querySelector("#layer_right_link").style.display="block";
     }

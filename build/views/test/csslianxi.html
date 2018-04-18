@@ -1,0 +1,112 @@
+<html>
+    <head>
+        <title>css练习</title>
+        <meta http-equiv="Content-Type" content="text/html;charset=utf-8;">
+        <meta name="viewport" content="width=device-width,inital-scale=1.0,maximum-scale=1.0,user-scalable=0;" />
+        <style type="text/css">
+            *{
+                margin:0;
+                padding:0;
+            }
+            div p {
+                width:200px;
+            }
+            
+            .wraper{
+                border:1px solid red;
+                display:inline-block;
+            }
+            /* .wraper::after{
+                clear:both;
+                display:block;
+                content:"";
+            }  */
+            .floatdiv{
+                width:100px;
+                height:100px;
+                background-color:#f00;
+                float:left;
+            }
+            .bottom{
+                /* position:relative; */
+                width:100%;
+                height:200px;
+                background-color:green; 
+            }
+            .margintaxian2{
+                /* border:1px solid green; */
+                /* display:inline-block; */
+                /* overflow:hidden; */
+                margin-top:20px;
+                height:400px;
+                background-color:#454545;
+                padding:0.1px;
+            }
+            .margintaxian2 .taxian1{
+                margin-top:20px;
+                height:100px;
+                background-color:#f02;
+            }
+        </style>
+        <script>
+            window.onload=function(){
+                setValue();
+            }
+            function getValue(id){
+               return  document.getElementById(id).value;
+            }
+            function setValue(){
+                var tz_ze=new Number(getValue("tz_ze")||40000);
+                var yeb_ll=new Number(getValue("yeb_ll")||4.1940);
+                var tz_ll=new Number(getValue("tz_ll")||8.6);
+                var tz_ts=new Number(getValue("tz_ts")||3);
+                document.getElementById("msg").innerHTML=tz_ze*tz_ll/100/365*tz_ts-tz_ts;//投资收益
+                document.getElementById("msg1").innerHTML=tz_ze*yeb_ll/100/365*(tz_ts+2);//余额宝收益
+            }
+        </script>
+    </head>
+    <body>
+            
+        <div>
+            <p>sfdsfsf sfafsdfsf sfdsfs sfafsdfsfs fdsfsfsf afsdfsfsf dsfsfs fafsdfsfsfd sfsfsfa fsdfsfs fdsfsfs fafs dfs f</p>
+        </div>
+        
+        <div>
+            <div>
+                <span>投资总额：</span><span> <input type="text" id="tz_ze" placeholder="40000" /></span>
+            </div>
+            <div>
+                <span>余额宝利率：</span><span> <input type="text" id="yeb_ll" placeholder="4.1940"/></span>
+            </div>
+            <div>
+                <span>投资利率：</span><span> <input type="text" id="tz_ll" placeholder="8.6"/></span>
+            </div>
+            <div>
+                <span>投资天数：</span><span> <input type="text" id="tz_ts" placeholder="3"/></span>
+            </div>
+            <div>
+                <span>余额宝收益</span><span id="msg1"></span>
+            </div>
+            <div>
+                <span>投资收益</span><span id="msg"></span>
+            </div>
+            <div>
+                <input type="button" value="重新计算" onclick="setValue()">
+            </div>
+        </div>
+        <div class="wraper">
+            <div class="floatdiv">清除浮动的几种方法介绍</div>
+            <div class="floatdiv">1.overflow: hidden</div>
+            <div class="floatdiv">2.::after的方式clear:both</div>
+            <div class="floatdiv">3.父级框float</div>
+            <div class="floatdiv">4.display: inline-block</div>
+            <!-- <br style="clear:both;"> -->
+        </div>
+        <div class="margintaxian1">
+        </div>
+        <div class="margintaxian2">
+            <div class="taxian1">margin塌陷1</div>
+            <!-- <div class="taxian2">margin塌陷2</div> -->
+        </div>
+    </body>
+</html>
