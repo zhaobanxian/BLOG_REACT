@@ -56,7 +56,7 @@
     padding:0 5px;
 }
 
-.item_layer{
+.ul_menu2 .item_layer{
     position:absolute;
     border:1px solid #EEE;
     padding:8px 0;
@@ -67,8 +67,13 @@
     display:none;
 }
 
-.item_layer_on{
+.ul_menu2 .item_layer_on{
+    position:absolute;
     display:block;
+    z-index:1;
+    opacity:1;
+    background-color:#fff;
+    border:1px solid #EEE;
 }
 
 .div_search_box_wraper{
@@ -240,8 +245,12 @@
 
 .div_ecode_logo{
     background-image:url("http://img.alicdn.com/tfs/TB18W1cQFXXXXaWXXXXXXXXXXXX-160-160.png");
+    background-size:62px;
+    background-position:50% 50%;
+    background-repeat:no-repeat;
     width:76px;
     height:90px;
-    float:right;
+    right:0;
+    position:absolute;
 }
 

@@ -91,9 +91,11 @@
     window.onload = function(){
          document.getElementById("wzdh").addEventListener("mouseover",function(){
              this.nextElementSibling.className="item_layer_on";
+             this.parentNode.style.backgroundColor="#fff";
          })
          document.getElementById("wzdh").addEventListener("mouseout",function(event){
             var domTo= event.toElment||event.relatedTarget;
+            this.parentNode.style.backgroundColor="#f5f5f5";
             console.log(domTo);
             if(domTo.contains(this)){
                 this.nextElementSibling.className="item_layer_out";
