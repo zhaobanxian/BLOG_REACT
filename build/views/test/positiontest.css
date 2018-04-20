@@ -16,3 +16,29 @@
 span{
     right:0;
 }
+
+.wraper{
+    width:100%;
+    position:relative;
+}
+
+.wraper div{
+    height:100px;
+    width:100px;
+}
+
+.wraper .item1{
+    float:left;
+    background-color:red;
+}
+
+
+.wraper .item2{
+    margin:auto;
+    background-color:green;
+}
+
+.wraper .item3{
+    float:right;
+    background-color:yellow;
+}
