@@ -1,0 +1,151 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.head{
+    height:45px;
+    background-color: rgb(240, 96, 0);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:10;
+}
+
+.head .img{
+    display:inline-block;
+    position:absolute;
+    left:0;
+    line-height:45px;
+    padding-left:10px;
+}
+
+.head .img img{
+    width:10px;
+    margin-top:14px;
+}
+
+.head .title{
+    text-align:center;
+    line-height:45px;
+    width:100%;
+    display:inline-block;
+    color:#fff;
+}
+
+.head .sx{
+    display:inline-block;
+    position:absolute;
+    right:10px;
+    color:#fff;
+    font-size:12px;
+    line-height:45px;
+}
+
+.mnue{
+    background-color: rgb(240, 96, 0);
+    margin-top:46px;
+    overflow:hidden;
+}
+
+.mnue::after{
+    clear:both;
+    content:'';
+    display:block;
+}
+
+.mnue ul{
+    list-style-type:none;
+}
+
+.mnue ul li{
+    float:left;
+    height:70px;
+    padding-top:10px;
+    padding-bottom:15px;
+    width:25%;
+    text-align:center;
+    color:#fff;
+    font-size:12px;
+}
+
+.mnue ul li div{
+    height:46px;
+}
+
+.mnue ul li div img{
+    width:29px;
+    height:29px;
+    margin-top:7px;
+}
+
+
+.mid-ad img{
+    width:100%;
+}
+
+.content-list{
+    background-color: rgb(244, 245, 245);
+}
+
+.content-list p{
+    font-size:12px;
+    line-height:25px;
+    text-indent:10px;
+    color:#aaa;
+    margin-bottom:-10px;
+}
+
+.content-list .list-item{
+    background-color:#fff;
+    color:#555;
+    margin-top:10px;
+    height: 125px;
+}
+
+.content-list .list-item .logo{
+    text-align:left;
+    font-size:14px;
+    height:40px;
+    line-height:40px;
+    margin-left:10px;
+}
+
+.content-list .list-item .logo img{
+    height:17px;
+    vertical-align: middle;
+}
+
+.content-list .list-item .info span{
+    width:20%;
+    line-height: 36px;
+    overflow:hidden;
+    font-size:14px;
+    display:inline-block;
+    height:36px;
+    text-overflow:ellipsis;
+    white-space:nowrap; 
+    text-align:center;
+}
+
+.content-list .list-item button{
+    height:25px;
+    width:60px;
+    border:0;
+    right:10px;
+    color:#fff;
+    position:absolute;
+    margin-top:10px;
+    display: block;
+}
+
+.list-item button:active{
+    color:red;
+}
+
+*{
+    transition:transform 1s;
+}
+.mid-ad:active{
+    transform:scaleX(1.1);
+}

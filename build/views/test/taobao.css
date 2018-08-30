@@ -4,6 +4,7 @@
     font-size:12px;
     color:#666;
     font-family:tahoma, arial, "Hiragino Sans GB", 宋体, sans-serif;
+    list-style-type:none;
 }
 
 a{
@@ -496,6 +497,7 @@ body{
     float:left;
     width:290px;
     text-align:center;
+    background-color:#FFF;
 }
 .screen1 .mnue_right .user_img {
     margin:auto;
@@ -578,7 +580,118 @@ body{
     margin-left:30px;
 }
 
-.mnue_right .tips ul{
-    list-style-type:none;
+.mnue_right .tips{
+    padding-top:10px;
+}
 
+.mnue_right .tips ul{
+    list-style-type:none;  
+    padding:0 8px;  
+}
+
+.mnue_right .tips li{
+    width:32px;
+    float:left;
+    margin:0 11px;
+}
+
+.mnue_right .tips li:hover{
+    border-bottom:2px solid #f40;
+    
+}
+
+.mnue_right .tips::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+
+.mnue_right .tips_content ul li{
+    float:left;
+    height:25px;
+}
+
+.mnue_right .tips_content ul{
+    margin:0 12px;
+    padding:12px 0 6px 0;
+    height:50px;
+    overflow:hidden;
+}
+
+.boxs ul {
+    margin-left:1px;
+}
+
+.mnue_right .boxs::after{
+    display:block;
+    content:"";
+    clear:both;
+}
+
+.boxs ul li{
+    float:left;
+    border:1px solid #f4f4f4;
+}
+
+.boxs ul li.boxs_bgpic{
+    width:70px;
+    height:75px;
+}
+
+
+.boxs ul li .bgpic{
+    display:inline-block;
+    width:24px;
+    height:24px;
+    margin-top:11px;
+    background-image:url(https://img.alicdn.com/tfs/TB1eiXTXlTH8KJjy0FiXXcRsXXa-24-595.png);
+}
+
+.boxs ul li p{
+    width: 70px;
+    line-height:24px;
+    margin-top:2px;
+}
+
+.aliapp_wrapper{
+    width:290px;
+    height:110px;
+}
+.aliapp_wrapper .aliapp_toptitle{
+    width:276px;
+    height:30px;
+    padding:0 0 0 14px;
+    text-align:left;
+    position:relative;
+}
+.aliapp_wrapper .aliapp_toptitle .aliapp_left{
+    line-height:30px;
+    font-size:14px;
+    font-weight:700;
+}
+
+.aliapp_wrapper .aliapp_toptitle .aliapp_right{
+    height:30px;
+    position:absolute;
+    right:10px;
+    vertical-align:middle;
+    line-height:30px;
+}
+
+.aliapp_wrapper ul{
+    padding:0 0 0 23px;
+}
+
+.aliapp_wrapper ul li{
+    float:left;
+}
+
+.aliapp_wrapper ul li.aliapp_bgpic{
+    width:32px;
+    height:32px;
+    margin:0 21px 8px 0;
+}
+.aliapp_wrapper ul li.aliapp_bgpic img{
+    width:32px;
+    height:32px;
 }

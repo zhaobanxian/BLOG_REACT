@@ -1,0 +1,331 @@
+*{
+    padding:0;
+    margin:0;
+    transition:1s;
+}
+
+ul{
+    list-style:none;
+}
+ul li{
+    float:left;
+}
+
+body{
+    background-color:#f4f5f5;
+}
+
+.my-head{
+    background-color:#fff;
+}
+
+.my-head .sz{
+    width:20%;
+    position:absolute;
+    right:0;
+    font-size:14px;
+    line-height:40px;
+    color:#fff;
+    background-image:url('http://m.eggworld.cn/images/icon_setting.png');
+    background-size:20px;
+    background-repeat:no-repeat;
+    background-position:left center;
+    text-indent:2em;
+}
+
+.my-head .touxiang{
+    font-size:14px;
+    text-indent:1em;
+    color:#fff;
+    position:absolute;
+    width:100%;
+    line-height:60px;
+    margin-top:40px;
+    text-align:left;
+    display: inline-block;
+    font-weight:700;
+}
+
+.my-head .touxiang xxx{
+    display: inline-block;
+    border-radius:50%;
+    background-image:url('http://m.eggworld.cn/images/touxiang_pic8.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:50px;
+    width:50px;
+    height:50px;
+}
+
+.my-head .touxiang img{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    vertical-align:middle;
+}
+
+.my-head .touxiang span{
+    line-height:60px;
+    display: inline-block;
+}
+
+.my-head .bg-pic img{
+    width:100%;
+    height: 120px;
+}
+
+.dingdan{
+    height:125px;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.dingdan>div{
+    background-color:#fff;
+}
+
+.dingdan .l{
+    width:49%;
+    display:inline-block;
+    text-indent:1em;
+    line-height: 50px;
+}
+
+.dingdan .r{
+    width:49%;
+    display:inline-block;
+    position:absolute;
+    font-size:12px;
+    color:#aaa;
+    line-height: 50px;
+    text-align:right;
+    right:10px;
+    padding-right:10px;
+    background-image:url('http://m.eggworld.cn/images/icon_go.png');
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:5px;
+}
+
+.dingdan .ld{
+    margin-top:2px;
+}
+
+
+.dingdan .ld .l .point{
+    width:5px;
+    height:5px;
+    border-radius:50%;
+    background-color:red;
+    position:absolute;
+    display:block;
+    left:25%;
+    margin-top:14px;
+    margin-left:-20px;
+}
+
+.dingdan .ld .l {
+    text-align:center;
+    height:75px;
+}
+
+.dingdan .ld .l .lg{
+    display:block;
+    width:100%;
+    height:40px;
+    background-image:url('http://m.eggworld.cn/images/personCenter_icon7.png');
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:22px 22px;
+    margin-top:1px;
+    margin-left:2px;
+}
+
+.dingdan .ld .l p{
+    line-height:14px;
+    text-indent:0;
+    margin-right:2px;
+    margin-top:2px;
+}
+
+.dingdan .ld .r{
+    height:75px;
+    text-align:center;
+}
+
+.dingdan .ld .r .point{
+    position:absolute;
+    width:4px;
+    height:4px;
+    background-color:red;
+    border-radius:50%;
+    left:50%;
+    margin-top:15px;
+    margin-left:-18px;
+}
+
+.dingdan .ld .r .lg{
+    display:block;
+    background-image:url('http://m.eggworld.cn/images/personCenter_icon5.png');
+    background-size:22px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    width:100%;
+    height:30px;
+    margin-top:5px;
+}
+
+.dingdan .ld .r p{
+    font-size:14px;
+    padding-left:5px;
+    line-height:22px;
+    color:#555;
+    margin-top:4px;
+}
+
+.my-qianbao{
+    background-color:#fff;
+    margin-top:8px;
+    font-size:14px;
+}
+
+.my-qianbao::after{
+    content:"";
+    display:block;
+    clear:both;
+}
+
+.my-qianbao .qb-title{
+    line-height:35px;
+    text-indent:10px;
+    font-size:16px;
+    font-weight:400;
+    color:#555;
+    font-family:"微软雅黑", "Helvetica Neue", "Roboto", "Segoe UI", sans-serif;
+}
+
+.my-qianbao ul li{
+    list-style-type:none;
+    float:left;
+    width:100%;
+    background-color:#fff;
+    border:1px solid #eee;
+    line-height:50px;
+}
+
+.my-qianbao li .qb-l{
+    width:49%;
+    display:inline-block;
+    text-align:left;
+    background-image:url("http://m.eggworld.cn/images/personCenter_icon20.png");
+    background-position:14px center;
+    background-repeat:no-repeat;
+    background-size:22px;
+    text-indent:45px;
+    font-family:微软雅黑, "Helvetica Neue", Roboto, "Segoe UI", sans-serif;
+    color:#555;
+}
+
+.my-qianbao li .qb-r{
+    width:40%;
+    display:inline-block;
+    text-align:right;
+    position:absolute;
+    right:10px;
+    padding-right:8px;
+    background-image:url('http://m.eggworld.cn/images/icon_go.png');
+    background-repeat:no-repeat;
+    background-position:right center;
+    background-size:5px;
+    font-size:12px;
+    color:#aaa;
+}
+
+.s2{
+    margin-top:10px;
+}
+
+.mnue{
+    position:fixed;
+    bottom:0;
+    width:100%;
+    background-color:#fff;
+    text-align:center;
+}
+
+.mnue ul{
+    list-style-type:none;
+    float:left;
+    height:47px;
+    width:100%;
+}
+
+.mnue ul li{
+    width:20%;
+    display:block;
+    overflow:hidden;
+    position:relative;
+}
+
+.mnue .mnue-pic{
+    height:35px;
+    background-repeat:no-repeat;
+    background-position:center center;
+    background-size:23px;
+}
+
+.mnue .mnue-name{
+    font-size:12px;
+    height:12px;
+    line-height:12px;
+    color:#aaa;
+}
+
+.mnue .point{
+    border-radius:50%;
+    width:17px;
+    height:17px;
+    color:#fff;
+    font-size:5px;
+    position:absolute;
+    margin:auto;
+    margin-right:11px;
+    background-color:red;
+    left:50%;
+}
+
+.mnue::after{
+    clear:both;
+    content:"";
+    display:block;
+}
+
+.zhezhao-b{
+    width:100vw;
+    background-color:rgba(0, 0, 0, 0.5);
+    height:100vh;
+    z-index:100;
+    position:fixed;
+    top:0;
+    transition:0.5s;
+}
+
+.zsp-hide{
+    transform:scale(0);
+}
+
+.zhezhao-content{
+    width:200px;
+    height:200px;
+    left:0; right:0; top:0; bottom:0;
+    margin:auto;
+    z-index:101;
+    position:fixed;
+    text-align:center;
+    background-color:#fff;
+    transition:0.5s;
+}
+
+.zsp-transcalehide{
+    transform:translate(100vw,0);
+}

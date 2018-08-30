@@ -71,6 +71,13 @@
     }
 }
 
-.transformrotateZ{
+.transformrotateZ:hover{
     animation:rotateZ 7s;
+}
+
+.transitiontest{
+    width:100px;
+    height:100px;
+    background-color:red;
+    transition:width 2s,height 2s;
 }

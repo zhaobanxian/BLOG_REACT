@@ -1,0 +1,88 @@
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>量能计算高低点</title>
+    <script>
+        function majoy() {
+            var a =parseInt(document.getElementById("hpoint").value);
+            var b =parseInt(document.getElementById("lpoint").value);
+            var c = a - b;
+            var d = a + c;//最高点
+            var e = b - c;//最低点
+            var f = b - (c / 2);//支撑位
+            var g = a + (c / 2);//压力位
+            document.getElementById("zuigaodian").innerHTML = d;
+            document.getElementById("zuididian").innerHTML = e;
+            document.getElementById("zhichengwei").innerHTML = f;
+            document.getElementById("yaliwei").innerHTML = g;
+            console.log(d,e,f,g);
+        }
+    </script>
+    <style>
+        *{
+            font-size:15px;
+            text-align:center;
+            margin:0;
+            padding:0;
+        }
+        .wrapper_box{
+            width:100%;
+            position:relative;
+            margin-top:20px;
+            
+        }
+        .wrapper{
+            width:300px;
+            line-height:30px;
+            margin:auto;
+        }
+
+        .wrapper .jisuan{ 
+            width:100px;
+        }
+
+        .wrapper .wrapper_right{
+            display:inline-block;
+            width:192px;
+            height:21px;
+            text-align:left;    
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper_box">
+        <div class="wrapper">
+            <span >高点：</span>
+            <input type="text" value="3250" id="hpoint">
+        </div>
+        <div class="wrapper">
+            <span>低点：</span>
+            <input type="text" value="3180" id="lpoint">
+        </div>
+        <div class="wrapper">
+            <input type="button" value="计算" onclick="majoy()" class="jisuan">
+        </div>
+        <div class="wrapper">
+            <div>
+                <span class="wrapper_left">最高点：</span>
+                <span class="wrapper_right" id="zuigaodian"></span>
+            </div>
+            <div>
+                <span class="wrapper_left">最低点：</span>
+                <span class="wrapper_right" id="zuididian"></span>
+            </div>
+            <div>
+                <span>支撑位：</span>
+                <span id="zhichengwei" class="wrapper_right"></span>
+            </div>
+            <div>
+                <span>压力位：</span>
+                <span id="yaliwei" class="wrapper_right"></span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
