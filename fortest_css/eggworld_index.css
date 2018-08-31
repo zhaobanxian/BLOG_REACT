@@ -105,7 +105,7 @@ ul li{
     padding:0 5px;
 }
 .buttonbody .bj-button ul li{
-    width:31.6%;
+    width:31.4%;
     text-align:center;
     border-radius:5px;
     border:1px solid #eee;
@@ -189,12 +189,16 @@ ul li{
 .bottom-mnue{
     position:fixed;
     width:100%;
+    bottom:0px;
+    z-index:10;
+    background-color:#fff;
 }
 
 .bottom-mnue ul{
     width:100%;
     border-top:1px solid #ccc;
     background-color:f9f4f3;
+    bottom:0;
 }
 .bottom-mnue ul li{
     width:20%;
@@ -202,7 +206,7 @@ ul li{
     font-size:10px;
     display: inline-block;
     text-align:center;
-    bottom:0px;
+    
 }
 
 .bottom-mnue ul li .t1-img{

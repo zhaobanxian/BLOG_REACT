@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0,maximun-scale=1,user-scalable=no">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="xiaomaju.css">
+    <title></title>
+    <script>
+        function maJu(domtag) {
+            var model = {
+                majudom: {},
+                majuhtml: "<div class='maju'><img src='../images/xbt.gif' alt='小马驹'></div>",
+                createdom: function () {
+                    var tmpdiv = document.createElement('div');
+                    tmpdiv.innerHTML = this.majuhtml;
+                    var rtnode = tmpdiv.childNodes[0];
+                    rtnode.domtag = domtag;
+                    window[rtnode.domtag] = {
+                        tagstatus: 0
+                    };
+                    rtnode.addEventListener("transitionend", this.fngd);
+                    rtnode.addEventListener("webkitTransitionEnd", this.fngd);
+                    return rtnode;
+                },
+                //动画完成的回调函数
+                fngd: function () {
+                    var tmptag = this.domtag;
+                    if (!window[tmptag]) {
+                        window[tmptag] = {
+                            tagstatus: 0
+                        };
+                    }
+                    var event = window.event;
+                    if (event.target.style.left == "-60px") {
+                        window[tmptag].tagstatus = 2;
+                    }
+                },
+                stindex: 0,
+                run: function () {
+                    var _this = this;
+                    setInterval(function () {
+                        var leftnum = parseInt(_this.majudom.style.left.replace('px', ''));
+                        var windowmodel = window[_this.majudom.domtag];
+                        if (!windowmodel.tagstatus) {
+                            //初始化
+                            _this.majudom.style.left = '100%';
+                            _this.majudom.style.top = '50px';
+                            _this.majudom.style.transition = "0s";
+                            windowmodel.tagstatus = 1;
+                        } else if (windowmodel.tagstatus == 2) {
+                            //下一阶段
+                            _this.majudom.style.transition = "0s";
+                            _this.majudom.style.left = "100%";
+                            _this.majudom.style.top = parseInt(_this.majudom.style.top.replace('px', '')) + 101 + 'px';
+                            _this.stindex++;
+                        } else if (windowmodel.tagstatus == 1) {
+                            //奔跑
+                            _this.majudom.style.transition = "3s";
+                            _this.majudom.style.left = '-60px';
+                        }
+                        if (_this.stindex == 5) {
+                            windowmodel.tagstatus = 0;
+                            _this.stindex = 0;
+                        } else {
+                            windowmodel.tagstatus = 1;
+                        }
+                    }, 20)
+                }
+            }
+            model.majudom = model.createdom();
+            document.getElementById("rongqi").appendChild(model.majudom);
+            return model;
+        }
+        window.majuindex=1;
+        window.majulist=[];
+        function fangma()  {
+            var tmpmaju= new maJu("maju"+majuindex);
+            tmpmaju.run();
+            majuindex++;
+            majulist.push(tmpmaju);
+        }
+    </script>
+</head>
+
+<body>
+    <div id='rongqi'></div>
+    <div class='step'>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+    </div>
+    <div class='fangma'><button onclick="fangma()">放马</button></div>
+</body>
+
+</html>

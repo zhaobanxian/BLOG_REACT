@@ -267,6 +267,16 @@ body{
     position:relative;
 }
 
+.mnue ul li a{
+    display:block;
+    transition:0.5s;
+}
+
+.mnue ul li a:active{
+    transform:scale(1.4);
+}
+
+
 .mnue .mnue-pic{
     height:35px;
     background-repeat:no-repeat;
