@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
     <meta charset="UTF-8">
@@ -22,23 +22,17 @@
 <body>
     <div id='exp'></div>
     <div id='shizhong'></div>
+    <div>
+        <p>demo包含内容：</p>
+        <p>1.元素渲染</p>
+        <p>2.JSX语法</p>
+        <p>3.组件</p>
+        <p>4.State状态</p>
+    </div>
 </body>
 
 </html>
 <script type='text/babel'>
-    window.onload = function () {
-
-        ReactDOM.render(
-            <div>
-            <HelloWorld name='HelloWorld'/>
-            <FunHelloWorld name='FunHelloWorld'/>
-            </div>,
-            document.getElementById('exp')
-        );
-
-        setInterval(runshizhong,1000);
-    }
-
     //es6 class方式来构建组件
     class HelloWorld extends React.Component{
         render(){
@@ -51,11 +45,55 @@
         return <h1>Hello,{props.name}</h1>
     }
 
+    //初级的时钟
     function runshizhong(){
         var dom=<span>{new Date().toLocaleTimeString()}</span>;
         ReactDOM.render(
             dom,
             document.getElementById('shizhong')
         );
+    }
+
+    //state自动更新的时钟
+    class Clock extends React.Component{
+        constructor(props){
+            super(props);
+            this.state={dt:new Date()};
+        }
+
+        render(){
+            return <span>{this.state.dt.toLocaleTimeString()}</span>
+        }
+        //clock插入到dom时触发事件
+        componentDidMount(){
+            this.tid=setInterval(()=>{
+                this.setState({dt:new Date()})
+            },1000)
+        }
+
+        //clock从dom移除时触发事件
+        componentWillUnmount(){
+            clearInterval(this.tid);
+        }
+    }
+</script>
+<script type='text/babel'>
+    window.onload = function () {
+        ReactDOM.render(
+            <div>
+            <HelloWorld name='HelloWorld'/>
+            <FunHelloWorld name='FunHelloWorld'/>
+            </div>,
+            document.getElementById('exp')
+        );
+        
+        var Cc= Clock;
+
+        ReactDOM.render(
+            <Cc />,
+            document.getElementById('shizhong')
+        )
+
+        //setInterval(runshizhong,1000);
     }
 </script>

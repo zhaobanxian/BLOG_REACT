@@ -2,7 +2,7 @@ var path = require("path");
 var webpack =require("webpack");
 var fs=require("fs");
 var glob=require("glob");
-var CommonsChunkPlugin = require("webpack/lib/optimize/CommonsChunkPlugin");
+
 
 //取文件后缀名
 function GetFileExt(filepath) {
@@ -48,9 +48,15 @@ function GetSetting(){
             ]
         },
         externals:{
-            // React:"react",
-            // ReactDOM:"react-dom"
-            blogcommon:"./build/common.min.js"
+            react:'React',
+            'react-dom':'ReactDOM',
+            'react-router-dom':'ReactRouterDOM'
+        },
+        resolve: {
+            alias: {
+                'Forreacttest': path.resolve(__dirname, 'forreacttest/'),
+                'component': path.resolve(__dirname, 'component/'),
+            }
         },
         plugins:[
                 // new webpack.optimize.UglifyJsPlugin({
@@ -59,8 +65,6 @@ function GetSetting(){
                 //         drop_console: false,
                 //       }
                 // })
-                //把入口文件里面的数组打包成vendors.js
-                //new webpack.optimize.CommonsChunkPlugin('vendor', 'vendor.js')
             ]
     };
 };
@@ -76,7 +80,7 @@ var setting=[];
 var blogsetting=GetSetting();
 blogsetting.output.filename="views/blog/[name].js";
 setEntry("./content/src/blog/*.js",blogsetting);
-setting.push(blogsetting);
+//setting.push(blogsetting);
 
 var comsetting= GetSetting();
 setEntry("./content/src/zsphelper.js",comsetting);
@@ -89,5 +93,35 @@ setEntry("./content/src/common.js",comsetting);
 //comsetting.output.chunkFilename="[name].js";
 comsetting.output.filename="[name].min.js";
 //setting.push(comsetting)
+
+var forreacttest=GetSetting();
+forreacttest.output.path=__dirname+'/forreacttest/';
+forreacttest.output.filename='[name].js';
+setEntry('./forreacttest/*.jsx',forreacttest);
+setting.push(forreacttest);
+
+var reactcomsetting={
+    entry:['./forreacttest/react.js','./forreacttest/reactdom.js'
+,'./forreacttest/react-router.js'],
+    output:{
+        path:__dirname+'/forreacttest/',
+        filename:'reactcom.js'
+    }
+};
+//setting.push(reactcomsetting);
+
+reactcomsetting={
+    entry: {
+        vendor: ['react', 'react-dom']
+    },
+    output: {
+        path: __dirname+'/forreacttest',
+        filename: "[name].[chunkHash:8].js",
+        chunkFilename: "[name].[chunkHash:8].js",
+    },
+    plugins: [
+    ]
+}
+//setting.push(reactcomsetting);
 
 module.exports=setting;
