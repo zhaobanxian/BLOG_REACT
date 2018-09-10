@@ -10,7 +10,7 @@
     <script src="../component/react-router-dom.js"></script>
     <script src='routertest.js'></script>
 </head>
-<body>
+<body onbeforeunload="reflsh()">
     <div class='content' id='app'>
     </div>
 </body>
@@ -34,5 +34,16 @@
     body div{
         min-height:80px;
         line-height: 80px;
+    }
+
+    div.title>div{
+        float:left;
+        width:100px;
+    }
+
+    div.title::after{
+        clear:both;
+        content:"";
+        display: block;
     }
 </style>

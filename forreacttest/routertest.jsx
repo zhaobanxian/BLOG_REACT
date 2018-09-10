@@ -5,3 +5,10 @@ window.onload = function () {
         <App></App>
     ), document.getElementById('app'))
 }
+
+function reflsh()
+{
+    alert("reflash")
+    window.location="routertest.html";
+    return false;    
+}
