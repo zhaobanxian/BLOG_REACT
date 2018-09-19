@@ -36,11 +36,17 @@ function GetSetting() {
             rules: [
                 {
                     test: /\.jsx?$/,
-                    loader: "babel-loader",
-                    options: {
-                        presets: ["react", "es2015"]
+                    use: {
                         //npm install babel-loader babel-core babel-preset-react babel-preset-es2015 --save-dev
+                        loader: "babel-loader",
+                        options: {
+                            presets: ["react", "es2015"]
+                        }
                     }
+                },
+                {
+                    test: /\.css$/,
+                    use: ['style-loader', 'css-loader']
                 },
                 {
                     test: /\.ts$/,
