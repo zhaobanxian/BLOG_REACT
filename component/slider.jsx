@@ -9,9 +9,13 @@ class Slider extends React.Component {
             log("缺少参数data");
             return;
         }
-            
-        this.timespan=this.props.timespan?this.props.timespan:'0.7';
-
+        this.timespan=1;
+        if(props.timespan){
+            this.timespan=parseFloat(props.timespan);
+            if(this.timespan<=0.7){
+                this.timespan=0.7;
+            }
+        }
         this.cindex = 0;
     }
     handlerClick(item) {
@@ -51,7 +55,7 @@ class Slider extends React.Component {
         }.bind(this))
         setTimeout(function () {
             this.toplay();
-        }.bind(this), 500)
+        }.bind(this), 1000)
     }
     touchmove() {
         var e = window.event;
@@ -85,10 +89,10 @@ class Slider extends React.Component {
             }
             var tsnum = this.vwidth * (0 - this.cindex);
             items.forEach(function (item) {
-                item.style.transition = `transform ${this.timespan}s`;
+                item.style.transition = `transform 0.5s`;
                 item.style.transform = `translateX(${tsnum}px)`;
             }.bind(this))
-        }.bind(this), 1000)
+        }.bind(this), this.timespan*1000)
     }
     tostop() {//停止轮播
         window.clearInterval(this.intervaltag);
