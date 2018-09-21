@@ -4,26 +4,25 @@
 }
 
 .slidercontent{
-    width:100%;
     overflow:hidden;
+    width:100%;
     position:relative;
 }
-
-.slidercontent::after{
-    clear:both;
+.slidercontent>div::after{
     content:"";
+    clear:both;
     display:block;
 }
 
-.slideimg{
-    width:100%;
+.slidercontent .slideimg{
     float:left;
+    position:relative;
 }
 
-.slideimg img{
+.slidercontent .slideimg img{
     width:100%;
 }
 
-.marginhide{
-    display:none;
+.slidercontent .marginhide{
+    left:-100%;
 }

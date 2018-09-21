@@ -19,7 +19,7 @@ var dataList = [{
 },
 ]
 
-var tSlider = <Slider data={dataList}></Slider>;
+var tSlider = <Slider data={dataList} autoplay='true' timespan='1'></Slider>;
 
 window.onload = function () {
     ReactDOM.render(
