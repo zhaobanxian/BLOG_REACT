@@ -1,9 +1,8 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import Slider from 'Slider';
-//import Slider from '../component/slider.jsx';
-//import ReactIScroll from '../node_modules/react-iscroll/dist/react-iscroll.js'
-// import IScroll from "../node_modules/iscroll5/index.js";
+import Slider from '../component/slider.jsx';
+import ReactIScroll from 'react-iscroll';
+import iScroll from 'iscroll';
 
 var dataList = [{
     linkurl: 'http://www.baidu.com',
