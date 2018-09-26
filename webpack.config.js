@@ -40,7 +40,14 @@ function GetSetting() {
                         //npm install babel-loader babel-core babel-preset-react babel-preset-es2015 --save-dev
                         loader: "babel-loader",
                         options: {
-                            presets: ["react", "es2015"]
+                            presets: ["react", "env"],
+                            "plugins": [
+                                ["import", {
+                                    'libraryName': 'antd',
+                                    'style': 'css',
+                                }]
+                            ]
+
                         }
                     }
                 },
