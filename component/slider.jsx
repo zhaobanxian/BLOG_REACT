@@ -133,8 +133,6 @@ class Slider extends React.Component {
         return <div className='slidercontent'>{this.getItem()}</div>
     }
 }
-
-module.exports={
-    Slider:Slider
-}
-//export default Slider;
+var name=""
+var sex=""
+export {Slider,name,sex}

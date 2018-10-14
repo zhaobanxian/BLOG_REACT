@@ -1,0 +1,44 @@
+*{
+    margin:0;
+    padding:0;
+    font-size:16px;
+}
+
+a{
+    text-decoration: none;
+    color:#000;
+}
+
+body>div{
+    height:100vh;
+}
+
+body>div::after{
+    clear:both;
+    display: block;
+    content:"";
+}
+
+.box_1{
+    height:100vh;
+    background-color:red;
+    width:33.3%;
+    position:fixed;
+}
+
+
+.box_2{
+    height:300vh;
+    background-color:yellow;
+    width:33.3%;
+    float:left;
+    margin-left:33.3%;
+}
+
+.box_3{
+    height:100vh;
+    background-color:#afa;
+    width:33.3%;
+    float:left;
+}
+

@@ -1,0 +1,131 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>张修铨科技创新大赛 法斗爱犬测评</title>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+    <meta name="MobileOptimized" content="320" />
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black" />
+
+
+    <link href="css/common.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+
+
+</head>
+<body>
+
+    <div class="wrap">
+        <div class="global">
+
+            <div class="text-main19_2 ">
+                <div class="jianyi">
+                    <div class="jianyiIn" id="id_content">
+                        
+                    </div>
+                </div>
+                <ul class="icon-menu">
+                    <li class="icon2" onclick="location='index.html';"></li>
+                </ul>
+            </div>
+        </div>
+        
+    </div>
+
+    <script type="text/javascript" src="js/jquery.min.js"></script>
+    
+    <script>
+        var model = {
+            baseInfo: {
+                jianyi: eval('(' + localStorage.getItem('_jianyi') + ')')
+            },
+            eventModel: {
+                init: function () {
+                    var m = 1;
+
+                    if (!model.baseInfo.jianyi)
+                        return;
+
+                    var w1 = '行为管理方面：';
+                    var w2 = '健康管理方面：';
+                    var w3 = '健康检测方面：';
+                    var w4 = '营养问题方面：';
+                    var w5 = '疾病问题方面：';
+
+
+                    var len = 0;
+                    if (model.baseInfo.jianyi)
+                        len = model.baseInfo.jianyi;
+
+                    var str1 = '';
+                    for (var i = 0; i < model.baseInfo.jianyi.w1.length; i++) {
+                        str1 += (model.baseInfo.jianyi.w1[i] + ',');
+                    }
+
+
+                    var str2 = '';
+                    for (var i = 0; i < model.baseInfo.jianyi.w2.length; i++) {
+                        str2 += (model.baseInfo.jianyi.w2[i] + ',');
+                    }
+                    var str3 = '';
+                    for (var i = 0; i < model.baseInfo.jianyi.w3.length; i++) {
+                        str3 += (model.baseInfo.jianyi.w3[i] + ',');
+                    }
+                    var str4 = '';
+                    for (var i = 0; i < model.baseInfo.jianyi.w4.length; i++) {
+                        str4 += (model.baseInfo.jianyi.w4[i] + ',');
+                    }
+                    var str5 = '';
+                    for (var i = 0; i < model.baseInfo.jianyi.w5.length; i++) {
+                        str5 += (model.baseInfo.jianyi.w5[i] + ',');
+                    }
+
+                    var root = $('#id_content');
+
+                    if (str1) {
+                        var ele = '<p><strong>' + w1 + '</strong >' + '需要' + str1.substring(0, str1.length - 1)+'</p>';
+                        
+                        root.append($(''+ele));
+                    }
+                    if (str2) {
+                        var ele = '<p><strong>' + w2 + '</strong >' + '需要' + str1.substring(0, str2.length - 1) + '</p>';
+
+                        root.append($(ele));
+                    }
+                    if (str3) {
+                        var ele = '<p><strong>' + w3 + '</strong >' + '需要' + str1.substring(0, str3.length - 1) + '</p>';
+
+                        root.append($(ele));
+                    }
+                    if (str4) {
+                        var ele = '<p><strong>' + w4 + '</strong >' + '需要' + str1.substring(0, str4.length - 1) + '</p>';
+
+                        root.append($(ele));
+                    }
+                    if (str5) {
+                        var ele = '<p><strong>' + w5 + '</strong >' + '需要' + str1.substring(0, str5.length - 1) + '</p>';
+
+                        root.append($(ele));
+                    }
+
+                   
+                }
+            }
+        }
+
+        
+
+        $(function () {
+            model.eventModel.init();
+        
+        });
+
+
+
+    </script>
+
+</body>
+</html>
