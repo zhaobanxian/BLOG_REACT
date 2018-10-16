@@ -1,0 +1,17 @@
+*{
+    padding:0;
+    margin:0;
+}
+
+.screenmain{
+    height:100vh;
+    width:100%;
+}
+
+.set_ul{
+    list-style-type:none;
+}
+
+.set_ul>li{
+    float:left;
+}
