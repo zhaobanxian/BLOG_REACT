@@ -37,7 +37,6 @@ function GetSetting() {
                 {
                     test: /\.jsx?$/,
                     use: {
-                        //npm install babel-loader babel-core babel-preset-react babel-preset-es2015 --save-dev
                         loader: "babel-loader",
                         options: {
                             presets: ["react", "env"],
@@ -112,7 +111,7 @@ var forreacttest = GetSetting();
 forreacttest.output.path = __dirname + '/forreacttest/';
 forreacttest.output.filename = '[name].js';
 setEntry('./forreacttest/*.jsx', forreacttest);
-setting.push(forreacttest);
+//setting.push(forreacttest);
 
 var reactcomsetting = {
     entry: ['./forreacttest/react.js', './forreacttest/reactdom.js'
@@ -137,5 +136,13 @@ reactcomsetting = {
     ]
 }
 //setting.push(reactcomsetting);
+
+var bluedsetting=GetSetting()
+bluedsetting.output={
+        path:__dirname+"/blued",
+        filename:"[name].js",
+}
+setEntry("./blued/index.jsx",bluedsetting);
+setting.push(bluedsetting);
 
 module.exports = setting;
