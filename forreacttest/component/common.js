@@ -1,6 +1,6 @@
 var commmon={
     sayHai:()=>{
-        console.log("hi")
+        console.log("www")
     }
 }
 
