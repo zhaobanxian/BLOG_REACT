@@ -111,7 +111,7 @@ var forreacttest = GetSetting();
 forreacttest.output.path = __dirname + '/forreacttest/';
 forreacttest.output.filename = '[name].js';
 setEntry('./forreacttest/*.jsx', forreacttest);
-setting.push(forreacttest);
+//setting.push(forreacttest);
 
 var reactcomsetting = {
     entry: ['./forreacttest/react.js', './forreacttest/reactdom.js'
@@ -143,6 +143,6 @@ bluedsetting.output={
         filename:"[name].js",
 }
 setEntry("./blued/index.jsx",bluedsetting);
-//setting.push(bluedsetting);
+setting.push(bluedsetting);
 
 module.exports = setting;

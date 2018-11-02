@@ -1,1 +1,1 @@
-import './component/common';
+import {sayHi} from './component/common';
