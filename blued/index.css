@@ -6,6 +6,9 @@
 .screenmain{
     height:100vh;
     width:100%;
+    background-position:center;
+    background-size:cover;
+    background-repeat: no-repeat;
 }
 
 .set_ul{
@@ -19,12 +22,14 @@
 .scroll_content{
     height:100vh;
     width:100vw;
+    max-width: 500px;
     overflow:hidden;
+    position:relative;
+    margin:auto;
 }
 
 .scroll{
     height:300vh;
-    width:100vw;
 }
 
 @keyframes arrow_updown{
@@ -43,10 +48,12 @@
     width:100%;
     position:fixed;
     bottom:20px;
-    left:48%;
     animation:arrow_updown 2s infinite;
+    max-width: 500px;
 }
 
 .scroll_content .updown img{
+    display:block;
+    margin:auto;
     width:30px;
 }

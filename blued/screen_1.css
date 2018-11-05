@@ -1,13 +1,13 @@
 .screenmain1{
     position:relative;
     background-image:url(https://dn-web-blued-cn.qbox.me/web/static/liveactivity/bg-index-a0425dc3.jpg);
-    background-size:cover;
     text-align:center;
     overflow: hidden;
 }
 .screenmain1>img{
     display:block;
     margin:auto;
+    
 }
 .screenmain1 .img1{
     height:25%;
@@ -61,4 +61,28 @@
     border:1px solid #3491ff;
     border-radius:5px;
     padding:5px 6px;
+}
+
+@keyframes img1_action{
+    0%{
+        transform:translateY(-200%);
+    }
+    30%{
+        transform:translateY(-200%);
+    }
+    100%{
+        transform:translateY(0%);
+    }
+}
+
+@keyframes img2_action{
+    0%{
+        transform:translateY(200vh);
+    }
+    30%{
+        transform:translateY(200vh);
+    }
+    100%{
+        transform:translateY(0%);
+    }
 }
