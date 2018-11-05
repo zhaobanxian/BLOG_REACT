@@ -42,11 +42,10 @@ function GetSetting() {
                             presets: ["react", "env"],
                             "plugins": [
                                 ["import", {
-                                    'libraryName': 'antd',
+                                    'libraryName': 'antd-mobile',
                                     'style': 'css',
                                 }]
                             ]
-
                         }
                     }
                 },
