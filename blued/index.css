@@ -57,3 +57,7 @@
     margin:auto;
     width:30px;
 }
+
+.hide{
+    visibility: hidden;
+}

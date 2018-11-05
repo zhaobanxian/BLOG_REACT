@@ -63,11 +63,19 @@
     padding:5px 6px;
 }
 
+.screenmain1 .img1_action{
+    animation:img1_action 1.2s;
+    animation-delay:0.5s;
+}
+
+.screenmain1 .img2_action{
+    animation: img2_action 1.2s;
+    animation-delay:0.5s;
+}
+
+
 @keyframes img1_action{
     0%{
-        transform:translateY(-200%);
-    }
-    30%{
         transform:translateY(-200%);
     }
     100%{
@@ -77,9 +85,6 @@
 
 @keyframes img2_action{
     0%{
-        transform:translateY(200vh);
-    }
-    30%{
         transform:translateY(200vh);
     }
     100%{

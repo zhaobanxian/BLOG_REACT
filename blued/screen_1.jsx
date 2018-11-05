@@ -7,13 +7,15 @@ export default class Screen_1 extends React.Component {
         super(props);
     }
     componentDidMount() {
+        this.iscurrent=this.props.iscurrent;
+        this.setState({});
     }
     componentWillReceiveProps(nextprops) {
-        if (this.props.iscurrent != nextprops.iscurrent) {
-            this.setimg1action();
-            this.setimg2action();
-            this.setState({});
-        }
+        // if (this.props.iscurrent != nextprops.iscurrent) {
+        //     this.setimg1action();
+        //     this.setimg2action();
+        //     this.setState({});
+        // }
     }
     setimg1action() {
         if (this.props.iscurrent) {
@@ -42,8 +44,8 @@ export default class Screen_1 extends React.Component {
     render() {
         return <div className="screenmain screenmain1">
             <div className='lan'>EN</div>
-            <img className="img1" style={this.img1actionstyle} onLoad={this.setimg1action.bind(this)} src="https://os4ty6tab.qnssl.com/cblued/static/m_index_logo.1ccsg2q112jiqn.png"></img>
-            <img className='img2' style={this.img2actionstyle} onLoad={this.setimg2action.bind(this)} src="https://dn-web-blued-cn.qbox.me/web/static/liveactivity/phone-fea27fab.png"></img>
+            <img className={this.iscurrent?'img1_action img1':'hide img1'} src="https://os4ty6tab.qnssl.com/cblued/static/m_index_logo.1ccsg2q112jiqn.png"></img>
+            <img className={this.iscurrent?'img2_action img2':'hide img2'} src="https://dn-web-blued-cn.qbox.me/web/static/liveactivity/phone-fea27fab.png"></img>
             <div className="dibu_mnue">
                 <ul className="set_ul">
                     <li><a>立即下载</a></li>
