@@ -65,12 +65,16 @@
 
 .screenmain1 .img1_action{
     animation:img1_action 1.2s;
-    animation-delay:0.5s;
+    animation-delay:0.3s;
+    animation-fill-mode: both;
+    animation-timing-function:linear;
 }
 
 .screenmain1 .img2_action{
-    animation: img2_action 1.2s;
-    animation-delay:0.5s;
+    animation: img2_action 0.8s;
+    animation-delay:0.3s;
+    animation-fill-mode: both;
+    animation-timing-function:linear;
 }
 
 
@@ -84,10 +88,10 @@
 }
 
 @keyframes img2_action{
-    0%{
-        transform:translateY(200vh);
+    from{
+        transform:translateY(400%);
     }
-    100%{
+    to{
         transform:translateY(0%);
     }
 }

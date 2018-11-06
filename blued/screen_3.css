@@ -1,43 +1,43 @@
-.screenmain2{
+.screenmain3{
     height:100vh;
     width:100%;
-    background-image:url(https://dn-web-blued-cn.qbox.me/web/static/liveactivity/bg01-c4c787a4.jpg);
+    background-image:url(https://dn-web-blued-cn.qbox.me/web/static/liveactivity/bg02-05252499.jpg);
     background-size:cover;
     background-position:center;
     position: relative;
     overflow:hidden;
 }
 
-.screenmain2 img{
+.screenmain3 img{
     display:block;
     margin:auto;
 }
 
-.screenmain2 .img1{
+.screenmain3 .img1{
     width:80%;
     margin-top:15%;
     margin-bottom:15%;
 }
 
-.screenmain2 .img2{
+.screenmain3 .img2{
     width:87%;
 }
 
-.screenmain2 .img1_action{
-    animation:img1_action 1.2s;
+.screenmain3 .img1_action{
+    animation:screen3_img1_action 1.2s;
     animation-delay:0.3s;
     animation-fill-mode: both;
     animation-timing-function:linear;
 }
 
-.screenmain2 .img2_action{
-    animation: img2_action 0.8s;
+.screenmain3 .img2_action{
+    animation: screen3_img2_action 0.8s;
     animation-delay:0.3s;
     animation-fill-mode: both;
     animation-timing-function:linear;
 }
 
-@keyframes img1_action{
+@keyframes screen3_img1_action{
     0%{
         transform:translateY(-200%);
     }
@@ -46,11 +46,11 @@
     }
 }
 
-@keyframes img2_action{
+@keyframes screen3_img2_action{
     0%{
-        transform:translateY(400%);
+        transform:translateX(100%);
     }
     30%{
-        transform:translateY(100%);
+        transform:translateX(0%);
     }
 }

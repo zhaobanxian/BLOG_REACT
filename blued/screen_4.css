@@ -1,43 +1,44 @@
-.screenmain2{
+.screenmain4{
     height:100vh;
     width:100%;
-    background-image:url(https://dn-web-blued-cn.qbox.me/web/static/liveactivity/bg01-c4c787a4.jpg);
+    background-image:url(https://dn-web-blued-cn.qbox.me/web/static/liveactivity/bg03-c7aca28a.jpg);
     background-size:cover;
     background-position:center;
     position: relative;
     overflow:hidden;
 }
 
-.screenmain2 img{
+.screenmain4 img{
     display:block;
     margin:auto;
 }
 
-.screenmain2 .img1{
+.screenmain4 .img1{
     width:80%;
     margin-top:15%;
     margin-bottom:15%;
 }
 
-.screenmain2 .img2{
-    width:87%;
+.screenmain4 .img2{
+    height:30%;
+    margin-left:5%;
 }
 
-.screenmain2 .img1_action{
-    animation:img1_action 1.2s;
+.screenmain4 .img1_action{
+    animation:screen4_img1_action 1.2s;
     animation-delay:0.3s;
     animation-fill-mode: both;
     animation-timing-function:linear;
 }
 
-.screenmain2 .img2_action{
-    animation: img2_action 0.8s;
+.screenmain4 .img2_action{
+    animation: screen4_img2_action 0.8s;
     animation-delay:0.3s;
     animation-fill-mode: both;
     animation-timing-function:linear;
 }
 
-@keyframes img1_action{
+@keyframes screen4_img1_action{
     0%{
         transform:translateY(-200%);
     }
@@ -46,7 +47,7 @@
     }
 }
 
-@keyframes img2_action{
+@keyframes screen4_img2_action{
     0%{
         transform:translateY(400%);
     }
