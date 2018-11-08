@@ -142,6 +142,14 @@ bluedsetting.output={
         filename:"[name].js",
 }
 setEntry("./blued/index.jsx",bluedsetting);
-setting.push(bluedsetting);
+//setting.push(bluedsetting);
+
+var jianlisetting=GetSetting()
+jianlisetting.output={
+        path:__dirname+"/jianli",
+        filename:"[name].js",
+}
+setEntry("./jianli/index.jsx",jianlisetting);
+setting.push(jianlisetting);
 
 module.exports = setting;
