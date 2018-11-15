@@ -39,7 +39,7 @@ class BoCai extends react.Component {
                     <span>cost:<input ref="A_cost" type="number" onChange={this.updateState}></input></span>
                 </div>
                 <div className="rowsone">
-                    <span><p>costB:{this.yuqiCostB}，预期赔率：{(this.yuqiMoney + this.costA + this.yuqiCostB) / this.yuqiCostB}</p></span>
+                    <span><p>costB:{this.yuqiCostB}，yuqipl：{(this.yuqiMoney + this.costA + this.yuqiCostB) / this.yuqiCostB}</p></span>
                 </div>
             </div>
             <div style={{ width: "100%", marginTop: "10px" }}>
@@ -50,9 +50,9 @@ class BoCai extends react.Component {
                 </div>
             </div>
             <div style={{ width: "100%", marginTop: "10px" }}>
-                赔率计算:<div className="tongji">
-                    <div>backA:{this.costA * this.pl1},收益:{this.costA * this.pl1 - this.costA - this.costB}</div>
-                    <div>backB:{this.costB * this.pl2}，收益：{this.costB * this.pl2 - this.costA - this.costB}</div>
+                pljisuan:<div className="tongji">
+                    <div>backA:{this.costA * this.pl1},sy:{this.costA * this.pl1 - this.costA - this.costB}</div>
+                    <div>backB:{this.costB * this.pl2}，sy：{this.costB * this.pl2 - this.costA - this.costB}</div>
                     <div>totalCost:{this.costA + this.costB}</div>
                 </div>
             </div>
