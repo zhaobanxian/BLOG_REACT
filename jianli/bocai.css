@@ -1,0 +1,28 @@
+.rowstow{
+    width:100%;
+}
+
+.rowstow>span{
+    width:30%;
+    display:inline-block;
+    line-height:40px;
+    text-align:left;
+    text-indent:2em;
+}
+
+.rowstow span>input{
+    width:20%;
+}
+
+.log{
+    width:100%;
+    height:150px;
+    overflow-y:scroll;
+    border:1px solid #000;
+}
+
+.tongji{
+    border:1px solid blue;
+    margin-bottom:10px;
+    padding:5px 10px;
+}

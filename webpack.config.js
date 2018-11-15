@@ -149,7 +149,7 @@ jianlisetting.output={
         path:__dirname+"/jianli",
         filename:"[name].js",
 }
-setEntry("./jianli/index.jsx",jianlisetting);
+setEntry("./jianli/*.jsx",jianlisetting);
 setting.push(jianlisetting);
 
 module.exports = setting;

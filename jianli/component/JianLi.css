@@ -1,0 +1,59 @@
+*{
+    margin:0;
+    padding:0;
+}
+
+.baseinfo{
+    position:relative;
+    width:100%;
+}
+
+.baseinfo .rowstow{
+    width:100%;
+}
+
+.baseinfo .rowstow span{
+    width:50%;
+    text-align:left;
+    display: inline-block;
+}
+
+.baseinfo .rowstow{
+    width:100%;
+}
+
+.baseinfo span{
+    line-height: 40px;
+    text-indent:1em;
+    display: inline-block;
+}
+
+.baseinfo .rowstow span{
+    text-align: left;
+    display:inline-block;
+}
+
+.basetitle{
+    width:100%;
+    line-height: 45px;
+    text-indent:2em;
+    font-weight:bold;
+    font-size:20px;
+    background-color:#aaa;
+}
+
+.baseinfo .rowsone{
+    width:100%;
+}
+
+.myintroduce{
+    width:100%;
+    position:relative;
+}
+
+.myintroduce p{
+    line-height: 30px;
+    font-size:16px;
+    text-indent:2em;
+    padding:0 16px;
+}

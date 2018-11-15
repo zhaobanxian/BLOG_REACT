@@ -1,12 +1,9 @@
-import react from 'react';
 import reactDOM from 'react-dom';
+import JianLi from './component/JianLi';
 
-/* */
-class JianLi extends react.Component{
-    constructor(props){
-        super(props);
-    }
-    render(){
-        return <div></div>
-    }
+window.onload = () => {
+    reactDOM.render(
+        <JianLi></JianLi>,
+        document.getElementById("content")
+    )
 }
