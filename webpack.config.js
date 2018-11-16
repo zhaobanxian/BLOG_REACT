@@ -23,6 +23,8 @@ function GetFileNameNoExt(filepath) {
 //获取一个初始化的webpack设置
 function GetSetting() {
     return {
+        mode:"production",//"production" | "development" | "none"
+        //devtool: '#eval-source-map',//映射js到原文件
         entry: {
         },//入口
         output: {//出口
