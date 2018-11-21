@@ -57,3 +57,18 @@
     text-indent:2em;
     padding:0 16px;
 }
+
+.wolkintroduce{
+    width:100%;
+}
+
+.wolkintroduce h4{
+    padding:0 1em;
+    margin-top:4px;
+}
+
+.wolkintroduce p{
+    text-indent:2em;
+    padding:0 1em;
+    line-height:30px;
+}

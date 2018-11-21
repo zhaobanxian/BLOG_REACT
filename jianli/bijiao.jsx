@@ -45,7 +45,7 @@ class BoCai extends react.Component {
         let rtModel = this.gupiaoShouXuFei(price, nm);
         this.guPiaoMsg = `购买成本${rtModel.guPiaoTatol},上涨回本价格：${rtModel.huiBenJiaGet},手续费${rtModel.shouXuFei}`;
         let rtETFModel = this.etfShouXuFei(price, nm);
-        this.guPiaoETFMsg = `购买成本${rtETFModel.guPiaoTatol},上涨回本价格：${rtETFModel.huiBenJiaGet},手续费${rtETFModel.shouXuFei}`;
+        this.guPiaoETFMsg = `etf购买成本${rtETFModel.guPiaoTatol},上涨回本价格：${rtETFModel.huiBenJiaGet},手续费${rtETFModel.shouXuFei}`;
         this.setState({});
     }
     gupiaoShouXuFei(price, num) {
